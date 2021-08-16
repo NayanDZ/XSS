@@ -84,13 +84,13 @@ X-XSS-Protection: 1; report=<reporting-uri>
 - ***1;report=http://example.com/report_URI***	xss filter enabled and reported the violation if attack detected
 
 ***Refrence:***
-> https://geekflare.com/http-header-implementation/#X-XSS-Protection
-> https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+* https://geekflare.com/http-header-implementation/#X-XSS-Protection
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
 
-### Client | Application side Validation
-> https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet (XSS Prevention Cheat Sheet)
-> https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet (DOM based XSS Prevention Cheat Sheet)
-> https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks   (Functions to Validate your Data)
+### Client/Application side Validation
+* https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet (XSS Prevention Cheat Sheet)
+* https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet (DOM based XSS Prevention Cheat Sheet)
+* https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks   (Functions to Validate your Data)
 
 ## XSS - Demonstration
 Retrieve User Cookie Using XSS
