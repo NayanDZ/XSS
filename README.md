@@ -11,8 +11,8 @@ OWASP TOP 10: A7-Cross-Site Scripting (XSS)
 Malicious script can access any cookies, session tokens, or other sensitive information
 
 ## Types of XSS
-- *Stored XSS*
-- *Reflected XSS*
+- *Stored XSS (persistent)*
+- *Reflected XSS (non-persistent)*
 - *DOM Based XSS*
 
 ## How to Test (Black Box Testing)
