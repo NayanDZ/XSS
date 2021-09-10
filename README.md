@@ -18,6 +18,7 @@ When an attacker injects malicious code into the vulnerable application and this
 When an attacker uses a malicious link, phishing email, or another social engineering technique to trap the victim into making a request to the server and this request contains malicious code. when victim click on link then browser receive a reply with the malicious code and executes it. 
 
 - **DOM Based XSS**:
+When the web application writes user input to the Document Object Model (DOM), then reads the data from the DOM and executes it in the browser.In DOM based XSS malicious code is not sent to the server which makes it difficult to detect by web application firewalls (WAFs).
 
 ## How to Test (Black Box Testing)
 ***1. Detect input vectors. For each web page***
