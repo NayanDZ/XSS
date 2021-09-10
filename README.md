@@ -11,13 +11,13 @@ OWASP TOP 10: A7-Cross-Site Scripting (XSS)
 Malicious script can access any cookies, session tokens, or other sensitive information
 
 ## Types of XSS
-- *Stored XSS (Persistent XSS)*:
-Stored XSS happens when an attacker injects malicious code into the vulnerable application and this content is permanently stored in a database. when victims visit a  vulnerable application page with the stored malicious code, that time their browser execute this code and victim get popup message.
+- **Stored XSS (Persistent XSS)**:
+When an attacker injects malicious code into the vulnerable application and this content is permanently stored in a database. when victims visit a  vulnerable application page with the stored malicious code, that time their browser execute this code and victim get popup message.
 
-- *Reflected XSS (non-persistent)*
-Reflected XSS happens when an attacker uses a malicious link, phishing email, or another social engineering technique to trap the victim into making a request to the server and this request contains malicious code. when victim click on link then browser receive a reply with the malicious code and executes it. 
+- **Reflected XSS (Non-persistent)**:
+When an attacker uses a malicious link, phishing email, or another social engineering technique to trap the victim into making a request to the server and this request contains malicious code. when victim click on link then browser receive a reply with the malicious code and executes it. 
 
-- *DOM Based XSS*
+- **DOM Based XSS**:
 
 ## How to Test (Black Box Testing)
 ***1. Detect input vectors. For each web page***
