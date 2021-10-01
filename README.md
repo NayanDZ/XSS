@@ -75,34 +75,33 @@ http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
 
 ## ⛑️ Remediation     
 ### - Server-Side validation
-1. [x] ***X-XSS-Protection***
-```
-X-XSS-Protection: 0                           -> xss filter disabled
-X-XSS-Protection: 1                           -> xss filter enabled and sanitized the page if attack detected
-X-XSS-Protection: 1; mode=block               -> xss filter enabled and prevented rendering the page if attack detected
-X-XSS-Protection: 1; report=<reporting-uri>   -> xss filter enabled and reported the violation if attack detected
-```
-2. [x] Use ***HTTPOnly*** cookie flag: `Set-Cookie: key=123081792183asjgdhasd; HTTPOnly`
+   1. [x] ***X-XSS-Protection***
+   ```
+   X-XSS-Protection: 0                           -> xss filter disabled
+   X-XSS-Protection: 1                           -> xss filter enabled and sanitized the page if attack detected
+   X-XSS-Protection: 1; mode=block               -> xss filter enabled and prevented rendering the page if attack detected
+   X-XSS-Protection: 1; report=<reporting-uri>   -> xss filter enabled and reported the violation if attack detected
+   ```
+   2. [x] Use ***HTTPOnly*** cookie flag: `Set-Cookie: key=123081792183asjgdhasd; HTTPOnly`
 
-3. [x] Implement ***Content Security Policy***: `Content-Security-Policy: default-src: 'self'; script-src: 'self' static.domain.tld`
-It's a browser side mechanism which allows you to create source allow lists for client side resources of your web application, e.g. JavaScript, CSS, images, etc. CSP via special HTTP header instructs the browser to only execute or render resources from those sources
+   3. [x] Implement ***Content Security Policy***: `Content-Security-Policy: default-src: 'self'; script-src: 'self' static.domain.tld`
+   It's a browser side mechanism which allows you to create source allow lists for client side resources of your web application, e.g. JavaScript, CSS, images, etc. CSP via special HTTP header instructs the browser to only execute or render resources from those sources
 
 ***Refrence:*** https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
 
 ### - Client(Application)/Server side validation
 
-1. [x] HTML Encode Before Inserting Untrusted Data into HTML Element Content: `<body>...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.</body>`
+   1. [x] HTML Encode Before Inserting Untrusted Data into HTML Element Content: `<body>...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.</body>`
 
-2. [x] Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes: `<div attr="...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.">content`
+   2. [x] Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes: `<div attr="...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.">content`
 
-3. [x] JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values: `<script>alert('...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.')</script>'
+   3. [x] JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values: `<script>alert('...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.')</script>'
 
-4. [x] URL Encode Before Inserting Untrusted Data into HTML URL Parameter Values:`<a href="http://www.website.com?test=ENCODE UNTRUSTED DATA BEFORE PUTTING HERE">link</a>
-`(when you want to put untrusted data into HTTP GET parameter value)
+   4. [x] URL Encode Before Inserting Untrusted Data into HTML URL Parameter Values:`<a href="http://www.website.com?test=ENCODE UNTRUSTED DATA BEFORE PUTTING HERE">link</a>`(when you want to put untrusted data into HTTP GET parameter value)
 
-* [XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [Functions to Validate your Data](https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks)
+   * [XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+   * [DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
+   * [Functions to Validate your Data](https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks)
 
 
 ## XSS - Demonstration
