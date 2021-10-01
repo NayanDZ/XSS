@@ -5,7 +5,6 @@ Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious s
 
 XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user.
 
-OWASP TOP 10: A7-Cross-Site Scripting (XSS)
 
 ## Impact
 Malicious script can access any cookies, session tokens, or other sensitive information
